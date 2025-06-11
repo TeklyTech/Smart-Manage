@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Project - SmartMaanage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-edit">
+    <div class="mobile-overlay"></div>
+
+    <!-- Persistent Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="icon">SM</span>
+            <h2>SmartMaanage</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> <span class="nav-text">Home</span></a></li>
+                <li><a href="projects.html"><span class="icon">📁</span> <span class="nav-text">Projects</span></a></li>
+                <li><a href="create.html"><span class="icon">➕</span> <span class="nav-text">Create New</span></a></li>
+            </ul>
+        </nav>
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar">←</button>
+    </aside>
+
+    <!-- Main Content Area with Editor and Properties Panel -->
+    <main class="main-content">
+        <div class="edit-container">
+
+            <!-- Center: Workspace for Editing Content -->
+            <div class="edit-workspace">
+                <header class="page-header">
+                    <h1>Advanced Editor</h1>
+                </header>
+                <form id="edit-project-form">
+                    <!-- This card acts as a live preview -->
+                    <div id="live-preview-card" class="card">
+                        <input type="hidden" id="project-id">
+                        
+                        <div class="form-group">
+                            <input type="text" id="project-title" class="form-control" placeholder="Project Title" required style="font-size: 1.5rem; background: transparent; border: none; padding-left: 0;">
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="project-content" class="form-control" placeholder="Write all your notes here..." style="background: transparent; border: 1px dashed rgba(255,255,255,0.2); min-height: 300px;"></textarea>
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div style="margin-top: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem;">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <button type="button" id="download-btn" class="btn btn-secondary">Download HTML</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Right: Properties Panel for Customization -->
+            <aside class="properties-panel card">
+                <h3>Properties</h3>
+                
+                <div class="form-group">
+                    <label for="prop-bg-color">Background Color</label>
+                    <input type="color" id="prop-bg-color" value="#1d1d2b" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="prop-text-color">Text Color</label>
+                    <input type="color" id="prop-text-color" value="#e4e4e4" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="prop-font-family">Font Family</label>
+                    <div class="custom-select-wrapper">
+                        <select id="prop-font-family" class="custom-select">
+                            <option value="'Poppins', sans-serif">Poppins</option>
+                            <option value="'Georgia', serif">Georgia</option>
+                            <option value="'Courier New', monospace">Courier New</option>
+                            <option value="'Arial', sans-serif">Arial</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <hr style="border-color: var(--glass-bg); margin: 1.5rem 0;">
+
+                <div class="form-group">
+                    <label style="cursor: pointer;">
+                        <input type="checkbox" id="prop-enable-gradient" checked> Use Gradient Background
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="prop-gradient-start">Gradient Start</label>
+                    <input type="color" id="prop-gradient-start" value="#8e44ad" class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="prop-gradient-end">Gradient End</label>
+                    <input type="color" id="prop-gradient-end" value="#00c6ff" class="form-control">
+                </div>
+                
+            </aside>
+
+        </div>
+    </main>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>

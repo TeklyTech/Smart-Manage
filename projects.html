@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - SmartMaanage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-projects">
+    <div class="mobile-overlay"></div>
+
+    <!-- Persistent Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="icon">SM</span>
+            <h2>SmartMaanage</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> <span class="nav-text">Home</span></a></li>
+                <li><a href="projects.html"><span class="icon">📁</span> <span class="nav-text">Projects</span></a></li>
+                <li><a href="create.html"><span class="icon">➕</span> <span class="nav-text">Create New</span></a></li>
+            </ul>
+        </nav>
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar">←</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="page-header">
+            <h1>My Projects</h1>
+        </header>
+
+        <!-- Project cards will be injected here by JavaScript -->
+        <div id="project-grid" class="grid-container">
+            <!-- Loading message can be placed here -->
+        </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <a href="create.html" class="fab" title="Create New Project">+</a>
+
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-modal" class="modal-overlay">
+        <div class="modal-content card">
+            <div class="modal-header">
+                <h2>Confirm Deletion</h2>
+                <button class="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure you want to permanently delete this project? This action cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="cancel-delete" class="btn btn-secondary">Cancel</button>
+                <button id="confirm-delete" class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

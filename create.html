@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Project - SmartMaanage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="page-create">
+    <div class="mobile-overlay"></div>
+
+    <!-- Persistent Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <span class="icon">SM</span>
+            <h2>SmartMaanage</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <ul>
+                <li><a href="index.html"><span class="icon">🏠</span> <span class="nav-text">Home</span></a></li>
+                <li><a href="projects.html"><span class="icon">📁</span> <span class="nav-text">Projects</span></a></li>
+                <li><a href="create.html"><span class="icon">➕</span> <span class="nav-text">Create New</span></a></li>
+            </ul>
+        </nav>
+        <button class="sidebar-toggle" aria-label="Toggle Sidebar">←</button>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="page-header">
+            <h1 id="page-title">Create a New Project</h1>
+        </header>
+
+        <div class="card">
+            <form id="project-form">
+                <div class="form-group">
+                    <label for="project-title">Project Title</label>
+                    <input type="text" id="project-title" class="form-control" placeholder="e.g., Q4 Marketing Campaign" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="project-category">Category</label>
+                    <div class="custom-select-wrapper">
+                        <select id="project-category" class="custom-select">
+                            <option value="Work">Work</option>
+                            <option value="Personal">Personal</option>
+                            <option value="Study">Study</option>
+                            <option value="Miscellaneous">Miscellaneous</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="project-tags">Tags (comma-separated)</label>
+                    <input type="text" id="project-tags" class="form-control" placeholder="e.g., design, planning, urgent">
+                </div>
+
+                <div class="form-group">
+                    <label for="project-content">Content / Notes</label>
+                    <textarea id="project-content" class="form-control" placeholder="Start writing your project details here..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Create Project</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
